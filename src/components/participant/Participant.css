@@ -1,0 +1,67 @@
+.abch-card-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 16px 0;
+}
+
+.abch-card {
+  position: relative;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 5px, rgba(0, 0, 0, 0.14) 0px 2px 2px,
+    rgba(0, 0, 0, 0.12) 0px 3px 1px -2px;
+  background: rgb(255, 255, 255);
+  border-radius: 7px;
+  max-width: 650px;
+  width: 100%;
+  padding: 16px 0;
+  margin: 16px 0;
+}
+
+.abch-title {
+  padding: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.abch-avatar {
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
+
+.abch-name {
+  font-size: 1.25rem;
+  font-weight: 500;
+  letter-spacing: 0.0125em;
+  line-height: 2rem;
+  margin-left: 20px;
+}
+
+.abch-speciality {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.abch-logo {
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+svg {
+  width: 100px;
+  height: 100px;
+  opacity: 0.4;
+  transform: scale(1.5) translateX(180%) translateY(65px);
+}
+
+hr.abch-separator {
+  background: rgba(0, 0, 0, 0.1);
+  margin: 0px;
+}
