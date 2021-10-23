@@ -7,10 +7,14 @@ type Props = {
 };
 
 export default class Participant extends React.Component<Props> {
+  linkToGithub = () => {
+    window.open(this.props.participant.github);
+  }
+  
   render() {
     return (
       <div className="abch-card-wrapper">
-        <div className="abch-card">
+        <div className="abch-card" onClick={this.linkToGithub}>
           <div className="abch-title">
             <div className="abch-avatar">
               <img src={this.props.participant.img} alt={this.props.participant.name} height="110px" />
