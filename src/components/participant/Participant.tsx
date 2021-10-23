@@ -1,33 +1,24 @@
 import React from "react";
 import { IParticipant } from "../../App";
-import "./Participant.css";
+import { SimpleCell, Avatar } from "@vkontakte/vkui";
 
 type Props = {
   participant: IParticipant;
 };
-
 export default class Participant extends React.Component<Props> {
   linkToGithub = () => {
     window.open(this.props.participant.github);
-  }
-  
+  };
+
   render() {
     return (
-      <div className="abch-card-wrapper">
-        <div className="abch-card" onClick={this.linkToGithub}>
-          <div className="abch-title">
-            <div className="abch-avatar">
-              <img src={this.props.participant.img} alt={this.props.participant.name} height="110px" />
-            </div>
-            <div className="abch-name">{this.props.participant.name}</div>
-          </div>
-          <hr className="abch-separator" />
-          <div className="abch-speciality">
-            {this.props.participant.speciality}
-          </div>
-          <div className="abch-logo">{this.props.participant.logo}</div>
-        </div>
-      </div>
+      <SimpleCell
+        description={this.props.participant.speciality}
+        before={<Avatar src={this.props.participant.img} />}
+        onClick={this.linkToGithub}
+      >
+        {this.props.participant.name}
+      </SimpleCell>
     );
   }
 }
