@@ -63,7 +63,7 @@ export const App = () => {
 
   const { viewWidth } = useAdaptivity();
   return (
-    <AppRoot>
+    <AppRoot mode="full">
       <SplitLayout header={<PanelHeader separator={false} />}>
         <SplitCol spaced={viewWidth && viewWidth > ViewWidth.MOBILE}>
           <View activePanel="main">
@@ -89,8 +89,8 @@ export const App = () => {
                   >
                     <div style={{ display: "flex" }}>
                       {skills.map((skill: string, index: number) => (
-                        <HorizontalCell key={index} size='m'>
-                          <Avatar size={88} mode='image' src={skill} />
+                        <HorizontalCell key={index} size="m">
+                          <Avatar size={88} mode="image" src={skill} />
                         </HorizontalCell>
                       ))}
                     </div>
